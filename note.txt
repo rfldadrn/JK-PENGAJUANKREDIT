@@ -1,0 +1,11 @@
+Admin	admin@bri.co.id	password
+Petugas	petugas@bri.co.id	password
+Analis	analis@bri.co.id	password
+Pimpinan	pimpinan@bri.co.id	password
+
+
+
+Nasabah baru login → Profil belum lengkap
+Klik "Ajukan Kredit Baru" → Redirect ke halaman profile dengan pesan error
+Lengkapi semua field wajib (NIK, tempat/tanggal lahir, alamat, pekerjaan, penghasilan)
+Setelah profil lengkap → Baru bisa akses form pengajuan kredit (step 1-4)
