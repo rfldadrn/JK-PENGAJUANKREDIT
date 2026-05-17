@@ -12,7 +12,7 @@ class Model
 
     public function all($orderBy = 'created_at DESC')
     {
-        $stmt = $this->db->query("SELECT * FROM {$this->table} ORDER BY {$orderBy}");
+        $stmt = $this->query("SELECT * FROM {$this->table} ORDER BY {$orderBy}");
         return $stmt->fetchAll();
     }
 

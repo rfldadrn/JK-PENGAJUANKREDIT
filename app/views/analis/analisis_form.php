@@ -114,7 +114,19 @@ ob_start();
                 <h6 class="mb-0"><i class="bi bi-calculator me-2"></i>Analisis Kredit (5C)</h6>
             </div>
             <div class="card-body">
-                <form method="POST" action="">
+                <?php if (isset($errors) && !empty($errors)): ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Terjadi kesalahan:</strong>
+                        <ul class="mb-0 mt-2">
+                            <?php foreach ($errors as $field => $error): ?>
+                                <li><?= htmlspecialchars($error) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                <?php endif; ?>
+
+                <form method="POST" action="<?= BASE_URL ?>analis/analisis/<?= $pengajuan['id_pengajuan'] ?>">
                     <?php
                     // Ensure $analisis is array
                     $analisis = is_array($analisis) ? $analisis : [];
